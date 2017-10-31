@@ -1,0 +1,19 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "Nothing Personnel Kid",
+  "main": "app/main/App.jsx",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianbrennan/personal_site.git"
+  },
+  "author": "Brian Brennan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianbrennan/personal_site/issues"
+  },
+  "homepage": "https://github.com/brianbrennan/personal_site#readme"
+}
