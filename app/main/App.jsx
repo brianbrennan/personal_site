@@ -9,6 +9,7 @@ import MainHeader from '../globals/components/main-header/MainHeader.jsx';
 import MainFooter from '../globals/components/main-footer/MainFooter.jsx';
 import HomePage from '../home/Home.jsx';
 
+import './../globals/style/styles.scss';
 
 class App extends React.Component {
 

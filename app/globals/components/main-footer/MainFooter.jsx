@@ -7,7 +7,7 @@ export default class MainFooter extends React.Component {
     render() {
         let listItems = Object.keys(pageMap).map((listItem) => {
             return (
-                <li key="{listItem.name}">{listItem.name}</li>
+                <li key="{pageMap[listItem].name}">{pageMap[listItem].name}</li>
             );
         });
 

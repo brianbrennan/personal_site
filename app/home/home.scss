@@ -1,0 +1,48 @@
+@import './../globals/style/variables';
+
+.home-page {
+    .hero {
+
+    }
+
+    .content {
+        margin: 0 15px;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    .plan-step, .develop-step {
+        * {
+            color: $white;
+        }
+    }
+
+    .plan-step {
+        position: relative;
+    }
+
+    .design-step, .contact-section {
+        padding: $lg 0;
+    }
+
+    .design-step {
+        background: url('../app/globals/assets/img/linedpaper.png');
+    }
+
+    .contact-section {
+        text-align: center;align-content: center;
+
+        img {
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+
+        .red-button {
+            display: block;
+            margin: $sm auto $lg auto;
+        }
+    }
+}
