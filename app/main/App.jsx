@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import './../styles/styles.scss';
 
+import blog from './../../blog.json';
+
 export class App extends React.Component {
     render() {
         return (
@@ -19,6 +21,9 @@ export class App extends React.Component {
                 because it got posted somewhere and your friend thought it was quirky and now you want
                 to make them think that you are cool by liking it too, or maybe you can call me an
                 EDGELORD because hey it&apos;s the internet, why not?
+
+                <div className="blog-posts" dangerouslySetInnerHTML={{__html: blog.first_post.content}}>
+                </div>
             </section>
         );
     }
