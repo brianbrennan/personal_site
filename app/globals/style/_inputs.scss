@@ -1,0 +1,11 @@
+button {
+    padding: $tny;
+    width: $xl * 2;
+    @include headline($white, $smFontSize);
+    background-color: $black;
+    border: none;
+}
+
+.red-button {
+    background-color: $vibrantRed;
+}

@@ -1,6 +1,4 @@
-var ItsABlog = require('itsablog').default,
-    itsablog = new ItsABlog({
-        dir: __dirname + '/app/blog/blog-posts'
-    });
+var ItsABlog = require('itsablog'),
+    itsablog = new ItsABlog();
 
 itsablog.outputToFile();
