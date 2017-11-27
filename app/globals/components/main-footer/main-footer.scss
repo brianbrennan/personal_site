@@ -1,0 +1,13 @@
+@import './../../style/variables';
+
+.main-footer {
+    width: 100%;
+
+    &::after {
+        display: none;
+    }
+
+    * {
+        color: $offWhite;
+    }
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900,900i');
+
+//Fonts
+$montserrat: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
+
+//Font Sizes
+$minFontSize: 9px;
+$smFontSize: 14px;
+$regFontSize: 18px;
+$medFontSize: 24px;
+$lgFontSize: 30px;
+
+@mixin headline($color: $black, $fontSize: $lgFontSize) {
+    font-family: $montserrat;
+    color: $color;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: $fontSize;
+}
+
+@mixin bodyCopy($color: $black, $fontSize: $regFontSize) {
+    font-family: $lato;
+    color: $color;
+    font-size: $fontSize;
+    line-height: 1.8;
+}
+
+h1 {
+    @include headline();
+}
+
+p {
+    @include bodyCopy();
+}

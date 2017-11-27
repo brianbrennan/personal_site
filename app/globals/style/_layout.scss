@@ -1,0 +1,61 @@
+.diagonal-section, .diagonal-left-section {
+    padding: $lg 0;
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+
+    &::before {
+        top: 0;
+        transform: skewY(1.5deg);
+        transform-origin: 100% 0;
+    }
+
+    &::after {
+        bottom: 0;
+        transform: skewY(1.5deg);
+        transform-origin: 0 100%;
+    }
+}
+
+.diagonal-left-section {
+    &::before {
+        top: 0;
+        transform: skewY(-1.5deg);
+        transform-origin: 0 100%;
+    }
+
+    &::after {
+        bottom: 0;
+        transform: skewY(-1.5deg);
+        transform-origin: 100% 0;
+    }
+}
+
+.bg-vibrant-red {
+    background-color:$vibrantRed;
+    color: $white;
+}
+
+.bg-vibrant-blue {
+    background-color:$vibrantBlue;
+    color: $white;
+}
+
+.bg-black {
+    background-color:$black;
+    color: $white;
+}
+
+.page {
+    padding-bottom: $xl;
+}
