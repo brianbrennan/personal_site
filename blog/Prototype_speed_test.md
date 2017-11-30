@@ -3,8 +3,7 @@
         "title": "A Look into The Speed of Prototypes vs. Closures",
         "tags": ["javascript", "functional programming"]
     }
-</meta
-
+</meta>
 
 # A Look into The Speed of Prototypes vs. Closures
 
