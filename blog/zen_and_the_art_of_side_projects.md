@@ -4,6 +4,7 @@
         "title": "Zen and the Art Of Side Projects"
     }
 </meta>
+
 # Zen and the Art Of Side Projects
 
 How many of you have been here before? You just had a cool idea. You want to build this cool idea. You figured it could be something fun to work on late at night, on saturday mornings. You want to take a breath at the end and go "Ah, look at what I've done. Here's my doo-hickie". Or maybe you just learned a new technology, and you're dying to try it out. You're trying to find an idea that could be good to have this new technology made with. You also want to stand at the end with some accomplishment, and say "well, here's something I did, and I learned a lot while doing this". I think these are the two main reasons for side projects: Wanting to build an idea, or wanting to learn through building.
