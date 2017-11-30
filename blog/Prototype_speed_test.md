@@ -35,7 +35,7 @@ ProtoDie.prototype.roll = function(){
 }
 ```
 
-If you're like me and learned a different programming language before JavaScript, this might seem a bit odd. This ProtoDie is in two seperate parts. Doesn't that defeat the purpose of encapsulation? The answer is, not at all. While having custom functions floating separate to your objects would absolutely be bad practice, the use of prototype here is not that. Instead, it is a single instance of the method listed, in this case 'roll', across all of the different ProtoDie objects. Now you might be thinking, "what's the big deal about that"? Let's keep building this simple program and find out. The first thing I tried testing was the speed of instantiation across multiple (and I mean multiple) objects.
+If you're like me and learned a different programming language before JavaScript, this might seem a bit odd. This ProtoDie is in two separate parts. Doesn't that defeat the purpose of encapsulation? The answer is, not at all. While having custom functions floating separate to your objects would absolutely be bad practice, the use of prototype here is not that. Instead, it is a single instance of the method listed, in this case 'roll', across all of the different ProtoDie objects. Now you might be thinking, "what's the big deal about that"? Let's keep building this simple program and find out. The first thing I tried testing was the speed of instantiation across multiple (and I mean multiple) objects.
 ```javascript
 var dice = [];
 
@@ -49,7 +49,7 @@ for(var i = 0; i < 100; i++){
 }
 ```
 
-Here we simply have two arrays, one for closure dice, and the other for prototype dice. After that we have a loop to make 100 objects in the array of the relative types that use that afforementioned methods. Next, I tried testing the speed of initiatig the roll method on each of these objects.
+Here we simply have two arrays, one for closure dice, and the other for prototype dice. After that we have a loop to make 100 objects in the array of the relative types that use that aforementioned methods. Next, I tried testing the speed of initiatig the roll method on each of these objects.
 ```javascript
 //roll once for each instance in dice
 
@@ -82,7 +82,7 @@ The fact that it took 100,000 objects for each method to see a noticeable differ
 
 ## The Good Results
 
-The other thing I wanted to test was memory usage. That seems to be the big difference. The fact that there exists only one method using the prototype approach, across all the instances of the specific object, HAS to mean a huge decrease in memory. And so, I tested it. At first, I made the mistake of testing for the size of the objects in my script.The problem with this is that these comparisons just take in to account the size of the objects construct methods, which are the same in both cases. I mistakingly used the script from the StackOverflow answer here http://stackoverflow.com/questions/1248302/javascript-object-size.
+The other thing I wanted to test was memory usage. That seems to be the big difference. The fact that there exists only one method using the prototype approach, across all the instances of the specific object, HAS to mean a huge decrease in memory. And so, I tested it. At first, I made the mistake of testing for the size of the objects in my script.The problem with this is that these comparisons just take in to account the size of the objects construct methods, which are the same in both cases. I mistakingly used the script from the [StackOverflow answer here](http://stackoverflow.com/questions/1248302/javascript-object-size).
 So instead, I dove into Chrome's Dev tool, took a heap snapshot, and looked for the difference between these two types of objects. At last, I found the conclusive difference I had been searching for.
 
 ```
@@ -90,4 +90,4 @@ Closure: 	5600 bytes
 Prototype: 	1600 bytes
 ```
 
-That is a serious increase in memory usage between closures and prototypes. Satisfied with finding my answer, I decided to do a bit more research to see what others came up with. I found this comprehensive benchmark here (https://github.com/podefr/benchmarks/blob/master/proto-vs-closure-memory/closure.js), showing that the different in memory usage between prototypes and closures increases dramatically with more methods on the objects. Finding out this size difference was an awesome way to understand more of how prototypes work.
+That is a serious increase in memory usage between closures and prototypes. Satisfied with finding my answer, I decided to do a bit more research to see what others came up with. I found this [comprehensive benchmark here](https://github.com/podefr/benchmarks/blob/master/proto-vs-closure-memory/closure.js), showing that the different in memory usage between prototypes and closures increases dramatically with more methods on the objects. Finding out this size difference was an awesome way to understand more of how prototypes work.
