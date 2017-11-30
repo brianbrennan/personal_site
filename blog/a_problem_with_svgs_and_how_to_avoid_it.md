@@ -4,6 +4,7 @@
     "title": "A Problem with SVGs and How to Avoid It"
 }
 </meta>
+
 # A Problem with SVGs and How to Avoid it
 
 I found an interesting bug while trying to find an easy to use SVG solution alternatives at work. I'd like to take you on the trip I went on while trying to solve a problem, in order to get the full scope of this super niche issue.
