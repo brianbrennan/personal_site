@@ -11,7 +11,7 @@ var config = {
     output: {
         path: BUILD_DIR,
         filename: 'app.min.js',
-        publicPath: '/dist/'
+        publicPath: '/'
     },
     module : {
         loaders : [
@@ -60,7 +60,8 @@ var config = {
         ]
     },
     devServer: {
-        port: 8080
+        port: 8080,
+        historyApiFallback: true
     }
 };
 

@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import blogPosts from './../../blog.json';
 
 import './blog-home.scss';
 
-export default class HomePage extends React.Component {
+export default class BlogHome extends React.Component {
     render() {
         let blogEntries = Object.keys(blogPosts).map((blogPostKey) => {
             return (
-                <section key="{blogPostKey}">{blogPosts[blogPostKey].meta.title}</section>
-                
+                <section key={blogPostKey}>
+                    <Link to={"/blog/" + blogPostKey}>
+                    {blogPosts[blogPostKey].meta.title}
+                    </Link>
+                </section>
             );
         });
 

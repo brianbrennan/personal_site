@@ -9,6 +9,7 @@ import MainHeader from '../globals/components/main-header/MainHeader.jsx';
 import MainFooter from '../globals/components/main-footer/MainFooter.jsx';
 import HomePage from '../home/Home.jsx';
 import BlogHome from '../blog/BlogHome.jsx';
+import BlogPost from '../blog/BlogPost.jsx';
 
 import './../globals/style/styles.scss';
 
@@ -21,6 +22,7 @@ class App extends React.Component {
                     <MainHeader />
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/blog" component={BlogHome} />
+                    <Route path="/blog/*" handler={BlogPost} />
                     <MainFooter/>
                 </div>
             </Router>
